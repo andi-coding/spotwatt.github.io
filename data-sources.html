@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenquellen - SpotWatt</title>
+    <meta name="description" content="Informationen zu den Datenquellen und Lizenzen der in SpotWatt verwendeten Strompreisdaten.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .data-sources-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .data-source-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .data-source-card h2 {
+            color: #1e3a5f;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .data-source-card h3 {
+            color: #2c5f8d;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .data-source-card p {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .data-source-card ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        .license-box {
+            background: #f0f7ff;
+            border-left: 4px solid #1e3a5f;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .license-box strong {
+            color: #1e3a5f;
+        }
+        .source-link {
+            color: #1e3a5f;
+            text-decoration: underline;
+        }
+        .source-link:hover {
+            color: #2c5f8d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><a href="index.html" style="color: inherit; text-decoration: none;"><img src="spotwatt_logo_final.png" alt="SpotWatt Logo" style="height: 32px; vertical-align: middle; margin-right: 8px;">SpotWatt</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html#download">Download</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="background: #f8f9fa; min-height: calc(100vh - 200px); padding-top: 80px;">
+        <div class="data-sources-content">
+            <h1 style="text-align: center; margin-bottom: 40px; color: #1e3a5f;">Datenquellen & Lizenzen</h1>
+
+            <div class="data-source-card">
+                <h2>⚡ Strompreisdaten</h2>
+
+                <h3>Primäre Datenquelle</h3>
+                <p>
+                    <strong>Bundesnetzagentur | SMARD.de</strong><br>
+                    Die Strompreisdaten stammen von der offiziellen Plattform
+                    <a href="https://www.smard.de" target="_blank" rel="noopener" class="source-link">SMARD.de</a>
+                    (Strommarktdaten) der Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen.
+                </p>
+
+                <h3>Technische Bereitstellung</h3>
+                <p>
+                    Die Daten werden über die
+                    <a href="https://www.energy-charts.info" target="_blank" rel="noopener" class="source-link">Energy Charts API</a>
+                    des Fraunhofer-Instituts für Solare Energiesysteme ISE bezogen.
+                </p>
+
+                <div class="license-box">
+                    <p style="margin: 0;"><strong>Lizenz:</strong>
+                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" class="source-link">
+                            CC BY 4.0 (Creative Commons Attribution 4.0 International)
+                        </a>
+                    </p>
+                </div>
+
+                <h3>Verarbeitung der Daten</h3>
+                <p>
+                    <strong>Änderungen:</strong> Die Rohdaten werden von 15-Minuten-Intervallen zu stündlichen Durchschnittswerten aggregiert,
+                    um eine übersichtlichere Darstellung für Endnutzer zu ermöglichen.
+                </p>
+
+                <h3>Rechtliche Grundlage</h3>
+                <p>
+                    Die Veröffentlichung der Daten erfolgt gemäß § 111d Energiewirtschaftsgesetz (EnWG) sowie der
+                    Verordnung zur Übermittlung und Veröffentlichung von Daten auf Elektrizitätsmärkten
+                    (Verordnung (EU) Nr. 543/2013 der Kommission).
+                </p>
+
+                <h3>Attribution</h3>
+                <p>
+                    Gemäß CC BY 4.0 Lizenz erfolgt die korrekte Namensnennung wie folgt:
+                </p>
+                <ul>
+                    <li><strong>Urheber:</strong> Bundesnetzagentur | SMARD.de</li>
+                    <li><strong>Quelle:</strong> <a href="https://www.smard.de" target="_blank" rel="noopener" class="source-link">https://www.smard.de</a></li>
+                    <li><strong>Lizenz:</strong> CC BY 4.0</li>
+                    <li><strong>Änderungen:</strong> Aggregation von 15-Min zu Stundenwerten</li>
+                </ul>
+            </div>
+
+            <div class="data-source-card">
+                <h2>📋 Nutzungsbedingungen</h2>
+
+                <h3>CC BY 4.0 Lizenz - Was bedeutet das?</h3>
+                <p>
+                    Die Creative Commons Attribution 4.0 International Lizenz erlaubt:
+                </p>
+                <ul>
+                    <li><strong>Teilen:</strong> Das Material in jedwedem Format oder Medium vervielfältigen und weiterverbreiten</li>
+                    <li><strong>Bearbeiten:</strong> Das Material remixen, verändern und darauf aufbauen</li>
+                    <li><strong>Kommerzielle Nutzung:</strong> Das Material für beliebige Zwecke nutzen, sogar kommerziell</li>
+                </ul>
+
+                <h3>Bedingungen</h3>
+                <p>
+                    <strong>Namensnennung:</strong> Angemessene Urheber- und Rechteangabe, Link zur Lizenz und Angabe von Änderungen erforderlich.
+                </p>
+
+                <p style="margin-top: 20px;">
+                    Vollständige Lizenzbedingungen:
+                    <a href="https://creativecommons.org/licenses/by/4.0/legalcode.de" target="_blank" rel="noopener" class="source-link">
+                        CC BY 4.0 Legal Code (Deutsch)
+                    </a>
+                </p>
+            </div>
+
+            <div class="data-source-card">
+                <h2>ℹ️ Haftungsausschluss</h2>
+                <p>
+                    SpotWatt übernimmt keine Gewähr für die Vollständigkeit, Richtigkeit und Aktualität der bereitgestellten Daten.
+                    Die Preisdaten dienen ausschließlich zu Informationszwecken und stellen keine Handlungsempfehlung dar.
+                </p>
+                <p>
+                    Für die Richtigkeit und Vollständigkeit der Originaldaten ist ausschließlich die jeweilige Datenquelle
+                    (Bundesnetzagentur | SMARD.de) verantwortlich.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn btn-primary">Zurück zur Startseite</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SpotWatt</h4>
+                    <p>Die intelligente Strompreis-App für Deutschland und Österreich.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="terms.html">Nutzungsbedingungen</a></li>
+                        <li><a href="privacy.html">Datenschutz</a></li>
+                        <li><a href="imprint.html">Impressum</a></li>
+                        <li><a href="data-sources.html">Datenquellen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>contact@spotwatt.at</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpotWatt. Alle Rechte vorbehalten.</p>
+                <p style="margin-top: 8px; font-size: 12px; color: #999;">
+                    Strompreisdaten: <a href="https://www.smard.de" target="_blank" rel="noopener" style="color: #999; text-decoration: underline;">Bundesnetzagentur | SMARD.de</a>
+                    (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color: #999; text-decoration: underline;">CC BY 4.0</a>)
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
