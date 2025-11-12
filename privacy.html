@@ -27,6 +27,11 @@
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
         }
+        .legal-content h4 {
+            color: var(--text-color);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
         .legal-content p {
             margin-bottom: 1rem;
         }
@@ -68,17 +73,17 @@
 
     <div class="legal-content">
         <h1>Datenschutzerklärung</h1>
-        
+
         <div class="last-updated">
-            <strong>Stand:</strong> 1. Oktober 2025
+            <strong>Stand:</strong> Januar 2025
         </div>
 
         <h2>1. Datenschutz auf einen Blick</h2>
-        
+
         <h3>Allgemeine Hinweise</h3>
         <p>
-            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
-            wenn Sie unsere App SpotWatt nutzen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich 
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert,
+            wenn Sie unsere App SpotWatt nutzen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich
             identifiziert werden können.
         </p>
 
@@ -86,46 +91,49 @@
         <p>
             <strong>Wer ist verantwortlich?</strong><br>
             Verantwortlich für die SpotWatt App: Andreas Karasek<br>
+            <a href="imprint.html">Vollständige Kontaktdaten und Impressum</a><br>
             Kontakt: contact@spotwatt.at
         </p>
+
         <p>
-            <strong>Hinweis:</strong> SpotWatt sammelt selbst keine personenbezogenen Daten. 
-            Diese Datenschutzerklärung informiert über die Datenübertragungen an externe Server, wie etwa beim Preisabruf.
+            <strong>Begriffe und Rollen</strong><br>
+            <strong>„SpotWatt" bzw. „wir"</strong> bezeichnet den Verantwortlichen gemäß Art. 4 Nr. 7 DSGVO,
+            der über Zwecke und Mittel der Datenverarbeitung entscheidet (Andreas Karasek).<br>
+            <strong>„Nutzer" bzw. „Sie"</strong> sind Personen, die die SpotWatt-App oder Website verwenden.<br>
+            <strong>„Auftragsverarbeiter"</strong> sind externe Dienstleister, die Daten in unserem Auftrag
+            verarbeiten (z. B. Google LLC für Firebase, RevenueCat Inc.).<br>
+            <strong>„Dritte"</strong> sind Empfänger außerhalb unserer direkten Kontrolle
+            (z. B. Apple Inc., Google LLC als Betreiber der App-Stores).
         </p>
 
         <p>
             <strong>Wie werden Daten verarbeitet?</strong><br>
-            Die meisten Daten werden ausschließlich lokal auf Ihrem Gerät verarbeitet. 
-            Nur beim Abruf der Strompreise wird Ihre IP-Adresse an unseren Dienstleister übertragen, der die aktuellen Strompreise bereitstellt.
+            Wir nutzen folgende externe Dienste:
+        </p>
+        <ul>
+            <li><strong>Cloudflare:</strong> Strompreis-Abruf (nur IP-Adresse, transient)</li>
+            <li><strong>Firebase (Google):</strong> Push-Benachrichtigungen und Einstellungssynchronisation</li>
+            <li><strong>RevenueCat:</strong> Verwaltung von In-App-Käufen</li>
+            <li><strong>GitHub Pages:</strong> Website-Hosting</li>
+            <li><strong>App Stores:</strong> App-Verteilung (Google Play, Apple App Store)</li>
+        </ul>
+        <p>
+            Alle anderen Daten (Preisberechnungen, Darstellung) werden ausschließlich lokal auf Ihrem Gerät verarbeitet.
         </p>
 
         <p>
             <strong>Wofür nutzen wir Ihre Daten?</strong><br>
-            Die Daten werden nur zur App-Funktionalität verwendet: Strompreise abrufen, 
-            lokale Benachrichtigungen senden und Einstellungen lokal am Gerät speichern.
+            Die Daten werden nur zur App-Funktionalität verwendet: Strompreise abrufen,
+            Push-Benachrichtigungen senden, Premium-Features verwalten und Einstellungen speichern.
         </p>
 
         <h2>2. Welche Daten werden erfasst?</h2>
 
-        <h3>2.1 App - Lokale Datenverarbeitung (auf Ihrem Gerät)</h3>
-        <p>SpotWatt verarbeitet folgende Daten <strong>ausschließlich lokal</strong> - sie verlassen Ihr Gerät nicht:</p>
+        <h3>2.1 Strompreis-Abruf (Cloudflare)</h3>
+        <p>Für den Abruf aktueller EPEX Spot Strompreise nutzt SpotWatt Cloudflare Inc. als Dienstleister:</p>
         <ul>
-            <li><strong>Strompreisdaten:</strong> Von Bundesnetzagentur/SMARD.de abgerufene EPEX Spot Preise (24-48h gecacht)</li>
-            <li><strong>App-Einstellungen:</strong> Preisschwellen, Benachrichtigungszeiten, gewählte Region</li>
-            <li><strong>Standortdaten (optional):</strong> Nur für Geofencing ("nur zu Hause benachrichtigen")</li>
-            <li><strong>Push-Token:</strong> Vom Betriebssystem automatisch generiert für lokale Benachrichtigungen</li>
-        </ul>
-        <p>
-            <strong>Speicherort:</strong> Ausschließlich auf Ihrem Gerät<br>
-            <strong>Übertragung:</strong> Keine Übertragung an SpotWatt-Server
-        </p>
-
-        <h3>2.2 App - Datenübertragung an Dritte (CloudFlare)</h3>
-        <p>SpotWatt überträgt <strong>nur minimal notwendige Daten</strong> an Dritte:</p>
-        <ul>
-            <li><strong>An Dienstleister (CloudFlare):</strong> Nur Ihre IP-Adresse (technisch notwendig für Internet-Requests)</li>
+            <li><strong>Übertragene Daten:</strong> Ihre IP-Adresse (personenbezogenes Datum gemäß DSGVO, technisch notwendig für Internet-Requests, wird transient verarbeitet und nicht dauerhaft gespeichert)</li>
             <li><strong>Zweck:</strong> Abruf aktueller EPEX Spot Strompreise für Deutschland und Österreich</li>
-            <li><strong>Häufigkeit:</strong> 1-2x täglich nach 15:00 Uhr</li>
         </ul>
         <p>
             <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse) – Die Datenverarbeitung
@@ -139,7 +147,7 @@
             Datenschutzerklärung: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a>
         </p>
 
-        <h3>2.3 Website - Hosting und Server-Logs (GitHub Pages)</h3>
+        <h3>2.2 Website-Hosting (GitHub Pages)</h3>
         <p>
             Unsere Website (www.spotwatt.at) wird über GitHub Pages gehostet,
             einen Dienst der GitHub, Inc. (88 Colin P Kelly Jr St, San Francisco, CA 94107, USA).
@@ -171,37 +179,255 @@
             GitHub Datenschutzerklärung: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>
         </p>
 
-        <h3>2.4 App - Externe Links</h3>
+        <h3>2.3 Push-Benachrichtigungen (Firebase)</h3>
         <p>
-            Unsere App enthält Links zu externen Websites (z.B. Ko-fi Spendenseite).
-            Beim Klicken auf solche Links verlassen Sie unsere App und gelangen zu externen Anbietern.
+            Um Ihnen Push-Benachrichtigungen senden zu können (z.B. tägliche Preisübersicht,
+            günstigste Zeiten, Geräte-Erinnerungen), nutzt SpotWatt Firebase Cloud Messaging (FCM)
+            und Cloud Firestore von Google LLC.
+        </p>
+
+        <h4>Welche Daten werden verarbeitet?</h4>
+        <ul>
+            <li><strong>FCM-Token:</strong> Eine eindeutige Geräte-ID, automatisch von Firebase generiert</li>
+            <li><strong>Benachrichtigungseinstellungen:</strong> Aktivierte Benachrichtigungsarten, Zeiten, Schwellenwerte</li>
+            <li><strong>Gerätenamen:</strong> Von Ihnen vergebene Namen für Geräte-Erinnerungen (z.B. "Waschmaschine")</li>
+            <li><strong>Zeitfenster:</strong> Geplante Zeiten für Geräte-Erinnerungen</li>
+            <li><strong>Marktauswahl:</strong> Gewähltes Land (Deutschland oder Österreich)</li>
+            <li><strong>Platform:</strong> Betriebssystem (iOS oder Android)</li>
+            <li><strong>IP-Adresse:</strong> Technisch notwendig für die Kommunikation mit Firebase-Servern</li>
+        </ul>
+
+        <h4>Speicherort</h4>
+        <p>
+            Google Cloud Firestore (bevorzugt europäische Rechenzentren)
+        </p>
+
+        <h4>Zweck der Verarbeitung</h4>
+        <ul>
+            <li>Versand von Push-Benachrichtigungen (täglich, günstigste Zeit, Preisschwellen)</li>
+            <li>Geräte-Erinnerungen für optimale Strompreis-Zeitfenster</li>
+            <li>Zeitplanung von Benachrichtigungen (über Google Cloud Functions)</li>
+            <li>Synchronisation Ihrer Einstellungen zwischen App und Backend</li>
+        </ul>
+
+        <h4>Speicherdauer</h4>
+        <p>
+            Die Daten werden gespeichert, solange Sie die App aktiv nutzen.
+            Ungültige Daten (z.B. nach App-Deinstallation) werden automatisch bereinigt.
+        </p>
+
+        <h4>Rechtsgrundlage</h4>
+        <p>
+            <strong>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung):</strong> Sie willigen durch Aktivierung der Benachrichtigungen
+            in die Verarbeitung ein.
+        </p>
+        <p>
+            <strong>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung):</strong> Für Premium-Nutzer sind Benachrichtigungen
+            Teil der gebuchten Leistung.
+        </p>
+
+        <h4>Internationale Datenübertragung</h4>
+        <p>
+            Google LLC ist ein US-amerikanisches Unternehmen (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA).
+            Die Datenverarbeitung kann auch außerhalb der EU erfolgen. Rechtsgrundlage für die Drittlandübermittlung ist:
         </p>
         <ul>
-            <li><strong>Keine Datenübertragung:</strong> Beim Klick werden keine Daten von uns übertragen</li>
-            <li><strong>Externe Datenschutzrichtlinien:</strong> Es gelten die Datenschutzbestimmungen der jeweiligen Website</li>
+            <li><strong>EU-US Data Privacy Framework</strong> (Angemessenheitsbeschluss der EU-Kommission gemäß Art. 45 DSGVO)</li>
         </ul>
         <p>
-            Wir haben keinen Einfluss auf den Inhalt und die Datenverarbeitung dieser externen Websites
-            und übernehmen keine Verantwortung dafür.
+            <strong>Weitere Informationen:</strong><br>
+            Google Firebase Datenschutzerklärung: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a><br>
+            Google Cloud Datenschutz: <a href="https://cloud.google.com/privacy" target="_blank" rel="noopener">https://cloud.google.com/privacy</a>
         </p>
+
+        <h4>Auftragsverarbeitung</h4>
+        <p>
+            Mit Google LLC wurde ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO abgeschlossen.
+            Die Datenverarbeitung erfolgt ausschließlich im Rahmen der App-Funktionalität.
+        </p>
+
+        <h4>Hinweis zu personenbezogenen Daten</h4>
+        <p>
+            <strong>Pseudonymes System ohne Nutzer-Zuordnung:</strong><br>
+            SpotWatt verwendet ein pseudonymes System ohne Nutzer-Accounts (keine E-Mails, keine Namen, keine Login-Daten).
+            FCM-Tokens sind technische Geräte-Identifikatoren, die <strong>nicht einer bestimmten Person zugeordnet werden können</strong>.
+            Eine Re-Identifikation einzelner Nutzer ist praktisch ausgeschlossen.
+        </p>
+        <p>
+            Gemäß <strong>Art. 11 Abs. 2 DSGVO</strong> finden die Betroffenenrechte (Art. 15-20 DSGVO, einschließlich Auskunfts- und Löschungsrecht)
+            keine Anwendung, wenn der Verantwortliche nicht in der Lage ist, die betroffene Person zu identifizieren.
+        </p>
+        <p>
+            <strong>Folge:</strong> Eine manuelle Löschung auf individuelle Anfrage ist rechtlich nicht erforderlich,
+            da wir FCM-Tokens nicht einzelnen Personen zuordnen können. Die automatische Bereinigung ist angemessen
+            und DSGVO-konform. Details zu Ihren Rechten finden Sie in Abschnitt 5.
+        </p>
+
+        <h3>2.4 In-App-Käufe und Premium-Features (RevenueCat)</h3>
+        <p>
+            Für die Verwaltung von In-App-Käufen (Premium-Version) nutzt SpotWatt den Dienst RevenueCat, Inc.
+            RevenueCat verwaltet Ihre Käufe und Premium-Status geräteübergreifend.
+        </p>
+
+        <h4>Welche Daten werden verarbeitet?</h4>
+        <ul>
+            <li><strong>RevenueCat User ID:</strong> Anonymisierte Nutzer-ID (generiert aus FCM-Token oder Geräte-ID)</li>
+            <li><strong>Kauftransaktionen:</strong> Welche Premium-Features gekauft wurden (über Google Play / App Store)</li>
+            <li><strong>Premium-Status (Entitlement):</strong> Ob Premium-Features freigeschaltet sind</li>
+            <li><strong>Platform:</strong> Betriebssystem (iOS oder Android)</li>
+            <li><strong>App-Version:</strong> Installierte App-Version</li>
+            <li><strong>Store-Informationen:</strong> Kauf-Receipts von Google Play / Apple App Store</li>
+        </ul>
+
+        <h4>KEINE Verarbeitung von Zahlungsdaten</h4>
+        <p>
+            <strong>Wichtig:</strong> RevenueCat und SpotWatt verarbeiten <strong>keine Zahlungsdaten</strong>
+            (Kreditkartennummern, Bankverbindungen). Die Kaufabwicklung erfolgt ausschließlich über:
+        </p>
+        <ul>
+            <li><strong>Android:</strong> Google Play Store (verwaltet von Google LLC)</li>
+            <li><strong>iOS:</strong> Apple App Store (verwaltet von Apple Inc.)</li>
+        </ul>
+        <p>
+            Es gelten die Datenschutzrichtlinien von
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play</a> bzw.
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a>.
+        </p>
+
+        <h4>Zweck der Verarbeitung</h4>
+        <ul>
+            <li>Verwaltung und Freischaltung von Premium-Features</li>
+            <li>Wiederherstellung von Käufen bei App-Neuinstallation</li>
+            <li>Geräteübergreifende Synchronisation des Premium-Status</li>
+            <li>Verhinderung von Missbrauch (z.B. mehrfache Nutzung ohne Kauf)</li>
+        </ul>
+
+        <h4>Speicherdauer</h4>
+        <ul>
+            <li><strong>Premium-Status:</strong> Solange Sie die App nutzen (bei Lifetime-Kauf: unbegrenzt)</li>
+            <li><strong>Kaufbelege:</strong> 10 Jahre (steuerrechtliche Aufbewahrungspflicht gemäß § 132 BAO / § 147 AO)</li>
+        </ul>
+
+        <h4>Rechtsgrundlage</h4>
+        <p>
+            <strong>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung):</strong> Die Datenverarbeitung ist erforderlich,
+            um den Kaufvertrag zu erfüllen und Premium-Features bereitzustellen.
+        </p>
+        <p>
+            <strong>Art. 6 Abs. 1 lit. c DSGVO (Rechtliche Verpflichtung):</strong> Aufbewahrung von Kaufbelegen
+            für steuerliche Zwecke (gesetzliche Pflicht).
+        </p>
+
+        <h4>Internationale Datenübertragung</h4>
+        <p>
+            RevenueCat, Inc. ist ein US-amerikanisches Unternehmen (548 Market St, PMB 61865, San Francisco, CA 94104, USA).
+            Die Datenverarbeitung erfolgt in den USA. Rechtsgrundlage für die Drittlandübermittlung:
+        </p>
+        <ul>
+            <li><strong>EU-US Data Privacy Framework</strong> (Angemessenheitsbeschluss der EU-Kommission gemäß Art. 45 DSGVO)</li>
+        </ul>
+        <p>
+            <strong>Weitere Informationen:</strong><br>
+            RevenueCat Datenschutzerklärung: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">https://www.revenuecat.com/privacy</a><br>
+            RevenueCat DSGVO-Compliance: <a href="https://www.revenuecat.com/gdpr" target="_blank" rel="noopener">https://www.revenuecat.com/gdpr</a>
+        </p>
+
+        <h4>Auftragsverarbeitung</h4>
+        <p>
+            Mit RevenueCat, Inc. wurde ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO abgeschlossen.
+            Die Datenverarbeitung erfolgt ausschließlich zur Verwaltung und Bereitstellung von Premium-Funktionen.
+        </p>
+
+        <h4>Hinweis zu personenbezogenen Daten</h4>
+        <p>
+            <strong>Pseudonymes System:</strong><br>
+            RevenueCat User-IDs sind pseudonymisierte technische Identifikatoren, die <strong>nicht einzelnen Personen zugeordnet werden können</strong>.
+            Eine Re-Identifikation einzelner Nutzer ist praktisch ausgeschlossen.
+        </p>
+        <p>
+            Gemäß <strong>Art. 11 Abs. 2 DSGVO</strong> finden die Betroffenenrechte (Art. 15-20 DSGVO, einschließlich Auskunfts- und Löschungsrecht)
+            keine Anwendung, wenn der Verantwortliche nicht in der Lage ist, die betroffene Person zu identifizieren.
+        </p>
+        <p>
+            <strong>Ausnahme - Kaufbelege:</strong> Für steuerrechtliche Zwecke müssen Kaufbelege 10 Jahre aufbewahrt werden (§ 132 BAO / § 147 AO).
+            Details zu Ihren Rechten finden Sie in Abschnitt 5.
+        </p>
+
+        <h3>2.5 App-Distribution (Google Play Store & Apple App Store)</h3>
+        <p>
+            Die SpotWatt App wird über den Google Play Store (Android) und Apple App Store (iOS) verteilt.
+            Beim Download, bei Updates und bei In-App-Käufen werden Daten durch diese Stores verarbeitet.
+        </p>
+
+        <h4>Welche Daten werden verarbeitet?</h4>
+        <p>
+            Die Stores verarbeiten folgende Daten (unabhängig von SpotWatt):
+        </p>
+        <ul>
+            <li><strong>Google Play Store:</strong> Google-Konto, Zahlungsdaten, Installationsdatum, Geräteinformationen, Bewertungen</li>
+            <li><strong>Apple App Store:</strong> Apple-ID, Zahlungsdaten, Installationsdatum, Geräteinformationen, Bewertungen</li>
+        </ul>
+
+        <h4>Zweck</h4>
+        <ul>
+            <li>Bereitstellung und Installation der App</li>
+            <li>Verwaltung von Updates</li>
+            <li>Kaufabwicklung bei Premium-Features</li>
+            <li>Bewertungen und Reviews</li>
+        </ul>
+
+        <h4>Verantwortlicher</h4>
+        <p>
+            Für die Datenverarbeitung durch die Stores sind <strong>Google LLC</strong> bzw. <strong>Apple Inc.</strong>
+            verantwortlich, nicht SpotWatt. SpotWatt hat keinen Zugriff auf diese Daten.
+        </p>
+
+        <h4>Weitere Informationen</h4>
+        <ul>
+            <li><strong>Google Play:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a></li>
+            <li><strong>Apple App Store:</strong> <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Datenschutzerklärung</a></li>
+        </ul>
 
         <h2>3. Datensparsamkeit und Datenvermeidung</h2>
         <p>
             Wir respektieren Ihre Privatsphäre und beschränken die Datenerfassung
             auf das absolut Notwendige für die Funktionalität der App.
         </p>
+
+        <h3>3.1 Was wir NICHT erfassen</h3>
         <p>
-            Folgende Daten werden daher derzeit weder erfasst noch übertragen:
+            Folgende Daten werden <strong>nicht</strong> erfasst oder übertragen:
         </p>
         <ul>
-            <li>Nutzungsdaten oder Analytics</li>
-            <li>Persönliche Profile oder Accounts</li>
-            <li>Standortdaten an externe Server</li>
-            <li>App-Einstellungen oder Präferenzen</li>
-            <li>Crash-Reports oder Fehlerberichte</li>
-            <li>Geräte-IDs oder Hardware-Informationen</li>
+            <li>Nutzungsdaten oder detailliertes Analytics (z.B. welche Seiten Sie besuchen)</li>
+            <li>Persönliche Profile oder Accounts mit Login</li>
+            <li>Standortdaten (keine Standorterfassung in der App)</li>
+            <li>Kontakte oder Telefonbuch</li>
+            <li>Fotos oder Mediendateien</li>
+            <li>Browser-Verlauf oder App-Nutzung außerhalb von SpotWatt</li>
+            <li>Detaillierte Crash-Reports mit persönlichen Daten</li>
+            <li>Werbe-IDs oder Tracking-Cookies</li>
         </ul>
 
+        <h3>3.2 Minimalprinzip</h3>
+        <p>
+            Bei allen Datenverarbeitungen halten wir uns an das <strong>Minimalprinzip</strong> (Art. 5 Abs. 1 lit. c DSGVO):
+        </p>
+        <ul>
+            <li><strong>Firebase:</strong> Nur FCM-Token + minimal notwendige Einstellungen, keine Geräte-IDs oder Nutzerprofile</li>
+            <li><strong>RevenueCat:</strong> Nur pseudonymisierte User-IDs + Kaufstatus, keine Zahlungsdaten</li>
+            <li><strong>CloudFlare:</strong> Nur IP-Adresse für Strompreis-Abruf (technisch zwingend notwendig)</li>
+        </ul>
+
+        <h3>3.3 Lokale Verarbeitung bevorzugt</h3>
+        <p>
+            Wo immer möglich, werden Daten <strong>lokal auf Ihrem Gerät</strong> verarbeitet:
+        </p>
+        <ul>
+            <li>Zwischenspeicherung von Strompreisdaten (24-48h Cache)</li>
+            <li>Preisberechnungen und Analysen (Vollkosten-Modus, Statistiken)</li>
+            <li>App-Darstellung und -Bedienung</li>
+        </ul>
 
         <h2>4. Cookies und Tracking</h2>
 
@@ -217,42 +443,116 @@
         <h2>5. Ihre Rechte</h2>
 
         <p>Nach der EU-Datenschutzgrundverordnung (DSGVO) haben Sie folgende Rechte:</p>
+
+        <h3>5.1 Übersicht</h3>
         <ul>
-            <li><strong>Auskunftsrecht:</strong> Da wir keine personenbezogenen Daten speichern, können wir nur bestätigen, dass keine Daten verarbeitet werden</li>
-            <li><strong>Berichtigungsrecht:</strong> Lokale App-Daten können Sie jederzeit selbst in den Einstellungen ändern</li>
-            <li><strong>Löschungsrecht:</strong> Alle Daten sind lokal - Deinstallation der App löscht alles</li>
-            <li><strong>Einschränkungsrecht:</strong> Sie können einzelne App-Funktionen jederzeit deaktivieren</li>
-            <li><strong>Widerspruchsrecht:</strong> Sie können der Datenverarbeitung durch Deinstallation widersprechen</li>
-            <li><strong>Datenübertragbarkeit:</strong> Lokale Daten gehören bereits Ihnen</li>
+            <li><strong>Auskunftsrecht (Art. 15):</strong> Recht auf Auskunft über Ihre gespeicherten Daten</li>
+            <li><strong>Berichtigungsrecht (Art. 16):</strong> Recht auf Berichtigung unrichtiger Daten</li>
+            <li><strong>Löschungsrecht (Art. 17):</strong> Recht auf Löschung Ihrer Daten</li>
+            <li><strong>Einschränkungsrecht (Art. 18):</strong> Recht auf Einschränkung der Verarbeitung</li>
+            <li><strong>Widerspruchsrecht (Art. 21):</strong> Recht auf Widerspruch gegen die Verarbeitung</li>
+            <li><strong>Datenübertragbarkeit (Art. 20):</strong> Recht auf Erhalt Ihrer Daten in strukturiertem Format</li>
+            <li><strong>Beschwerderecht:</strong> Recht auf Beschwerde bei einer Aufsichtsbehörde</li>
         </ul>
 
-        <h3>5.1 Löschung Ihrer Daten</h3>
+        <h3>5.2 So machen Sie Ihre Rechte geltend</h3>
 
-        <p>Sie können Ihre Daten jederzeit löschen:</p>
+        <h4>Auskunftsrecht, Löschungsrecht und Datenübertragbarkeit (Art. 15, 17, 20 DSGVO)</h4>
+        <p>
+            <strong>Keine Identifizierung möglich (Art. 11 Abs. 2 DSGVO):</strong><br>
+            SpotWatt verwendet ein pseudonymes System ohne Nutzer-Accounts (keine E-Mail, kein Name, keine Login-Daten).
+            Die gespeicherten FCM-Tokens und RevenueCat User-IDs sind technische Identifikatoren,
+            die wir <strong>nicht einzelnen Personen zuordnen können</strong>.
+        </p>
+        <p>
+            Gemäß <strong>Art. 11 Abs. 2 DSGVO</strong> ist der Verantwortliche nicht verpflichtet,
+            zusätzliche Informationen einzuholen, um eine betroffene Person zu identifizieren,
+            allein um dieser Verordnung zu entsprechen.
+        </p>
+        <p>
+            Da SpotWatt keine Nutzerkonten oder Zuordnungsmerkmale verwendet, können folgende
+            Betroffenenrechte nur insoweit ausgeübt werden, wie eine Identifizierung technisch möglich ist:
+        </p>
         <ul>
-            <li><strong>App-Daten löschen:</strong> Einstellungen → Daten löschen</li>
-            <li><strong>App deinstallieren:</strong> Löscht alle lokalen Daten</li>
+            <li><strong>Auskunftsrecht (Art. 15):</strong> Wir können nicht feststellen, welche Daten zu Ihnen gehören</li>
+            <li><strong>Berichtigungsrecht (Art. 16):</strong> Wir können nicht identifizieren, welche Daten berichtigt werden sollen</li>
+            <li><strong>Löschungsrecht (Art. 17):</strong> Wir können nicht bestimmen, welche Daten gelöscht werden sollen</li>
+            <li><strong>Einschränkungsrecht (Art. 18):</strong> Wir können nicht zuordnen, welche Verarbeitung eingeschränkt werden soll</li>
+            <li><strong>Datenübertragbarkeit (Art. 20):</strong> Wir können nicht ermitteln, welche Daten übertragen werden sollen</li>
+        </ul>
+
+        <h4>Was Sie selbst tun können</h4>
+        <p>
+            Da keine Nutzer-Zuordnung möglich ist, können Sie Ihre Daten selbst verwalten:
+        </p>
+        <ul>
+            <li><strong>Daten einsehen:</strong> Alle Ihre Einstellungen sind in der App sichtbar (Einstellungen → Benachrichtigungen, Premium-Status)</li>
+            <li><strong>Daten ändern:</strong> Sie können alle Einstellungen jederzeit in der App ändern</li>
+            <li><strong>Daten löschen:</strong> App deinstallieren → Sofortige Löschung lokal + automatische Bereinigung aus Firestore</li>
+            <li><strong>Daten exportieren:</strong> Technisch nicht möglich wegen fehlender Nutzer-Zuordnung. Sie können Ihre Einstellungen aber manuell notieren.</li>
+        </ul>
+
+        <h4>Widerspruchsrecht (Art. 21 DSGVO)</h4>
+        <p>
+            Sie können der Datenverarbeitung jederzeit widersprechen:
+        </p>
+        <ul>
+            <li><strong>Benachrichtigungen deaktivieren:</strong> App-Einstellungen → Benachrichtigungen → Alle deaktivieren (stoppt die Verarbeitung sofort)</li>
+            <li><strong>Vollständiger Widerspruch:</strong> App deinstallieren (löscht alle lokalen Daten; Firebase-Daten werden automatisch bereinigt)</li>
+        </ul>
+
+        <h4>Widerruf von Einwilligungen (Art. 7 Abs. 3 DSGVO)</h4>
+        <p>
+            Soweit die Verarbeitung auf Ihrer Einwilligung beruht (z. B. Push-Benachrichtigungen),
+            können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen:
+        </p>
+        <ul>
+            <li><strong>Wie:</strong> In der App unter Einstellungen → Benachrichtigungen → Alle deaktivieren</li>
+            <li><strong>Wirkung:</strong> Die Verarbeitung wird sofort gestoppt. Technische Daten (z. B. Firebase-Tokens) werden nicht mehr genutzt und bei Inaktivität automatisch bereinigt.</li>
+            <li><strong>Ohne Angabe von Gründen</strong></li>
+            <li><strong>Rechtmäßigkeit:</strong> Die bis zum Widerruf erfolgte Verarbeitung bleibt rechtmäßig</li>
         </ul>
 
         <h2>6. Datensicherheit</h2>
-        
+
         <p>Wir verwenden folgende Sicherheitsmaßnahmen zum Schutz Ihrer Daten:</p>
         <ul>
             <li>Verschlüsselte Datenübertragung (HTTPS/TLS)</li>
             <li>Lokale Datenspeicherung wo möglich</li>
             <li>Regelmäßige Sicherheitsupdates</li>
             <li>Minimale Datenerfassung (Datensparsamkeit)</li>
-            <li>Anonymisierung von Analysedaten</li>
+            <li>Pseudonymisierung von Identifikatoren (FCM-Token, RevenueCat User-ID)</li>
         </ul>
 
         <h2>7. Kinder</h2>
-        
+
         <p>
-            Unsere App richtet sich nicht an Personen unter 16 Jahren. Wir erfassen wissentlich keine 
+            Unsere App richtet sich nicht an Personen unter 16 Jahren. Wir erfassen wissentlich keine
             personenbezogenen Daten von Kindern.
         </p>
 
-        <h2>8. Änderungen der Datenschutzerklärung</h2>
+        <h2>8. Automatisierte Entscheidungsfindung und Profiling</h2>
+
+        <p>
+            SpotWatt verwendet <strong>keine automatisierte Entscheidungsfindung</strong> gemäß Art. 22 DSGVO und
+            erstellt <strong>keine Nutzerprofile</strong> zu Marketing- oder Werbezwecken.
+        </p>
+
+        <p>
+            Die App führt ausschließlich technische Berechnungen durch:
+        </p>
+        <ul>
+            <li>Preisberechnungen (Vollkosten-Modus)</li>
+            <li>Zeitplanung für Benachrichtigungen</li>
+            <li>Optimierung von Geräteeinsatz-Zeiten</li>
+        </ul>
+
+        <p>
+            Diese Berechnungen haben <strong>keine rechtlichen Folgen</strong> für Sie und dienen
+            ausschließlich der App-Funktionalität (Anzeige optimaler Strompreis-Zeiten).
+        </p>
+
+        <h2>9. Änderungen der Datenschutzerklärung</h2>
 
         <p>
             Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen
@@ -264,7 +564,7 @@
             diese Datenschutzerklärung regelmäßig zu überprüfen, um über Änderungen informiert zu bleiben.
         </p>
 
-        <h2>9. Kontakt</h2>
+        <h2>10. Kontakt</h2>
 
         <p>Bei Fragen zum Datenschutz kontaktieren Sie uns bitte:</p>
         <ul>
@@ -272,7 +572,7 @@
             <li><strong>Betreff:</strong> Datenschutzanfrage SpotWatt</li>
         </ul>
 
-        <h2>10. Aufsichtsbehörde</h2>
+        <h2>11. Aufsichtsbehörde</h2>
 
         <p>
             Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
