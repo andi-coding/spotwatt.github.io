@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farbvergleich - Premium Badges</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f8f9fa;
+            padding: 40px 20px;
+        }
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 40px;
+        }
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .option-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .option-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1e3a5f;
+        }
+        .badge-example {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .feature-card-demo {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .comparison-table-demo {
+            margin-top: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .table-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .table-row > div {
+            padding: 15px;
+        }
+        .table-header {
+            background: #1e3a5f;
+            color: white;
+            font-weight: bold;
+        }
+        .premium-col {
+            background: #f1f8f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="comparison-container">
+        <h1>Farbvergleich: Premium Badges</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">
+            Vergleichen Sie die drei Optionen und wählen Sie die beste für SpotWatt
+        </p>
+
+        <!-- Badges nebeneinander -->
+        <div class="option-grid">
+
+            <!-- Option A: Grün -->
+            <div class="option-card">
+                <div class="option-title">Option A: Grün</div>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">
+                    Harmonisch mit Spar-Thema, passt zur Sekundärfarbe
+                </p>
+
+                <div class="badge-example">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Feature Badges:</p>
+                    <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Kostenlos</span>
+                    <span style="display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px;">Premium</span>
+                </div>
+
+                <div class="feature-card-demo">
+                    <h3 style="color: #1e3a5f; margin-bottom: 10px;">💡 Intelligente Spartipps</h3>
+                    <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 1 Gerät</span>
+                    <span style="display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px; margin-bottom: 15px;">Premium: Unbegrenzt</span>
+                    <p style="color: #666; font-size: 0.9rem;">
+                        SpotWatt berechnet die optimalen Zeitfenster für Ihre Geräte...
+                    </p>
+                </div>
+
+                <div class="comparison-table-demo">
+                    <div class="table-row table-header">
+                        <div>Features</div>
+                        <div>Kostenlos</div>
+                        <div>Premium</div>
+                    </div>
+                    <div class="table-row">
+                        <div><strong>💡 Spartipps</strong></div>
+                        <div style="text-align: center;">
+                            <span style="color: #4CAF50; font-size: 1.3rem;">✓</span>
+                            <div style="font-size: 0.8rem; color: #666;">1 Gerät</div>
+                        </div>
+                        <div style="text-align: center; background: #f1f8f4;">
+                            <span style="color: #4CAF50; font-size: 1.3rem;">✓</span>
+                            <div style="font-size: 0.8rem; color: #2e7d32; font-weight: 600;">Unbegrenzt</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #e8f5e9; border-radius: 8px;">
+                    <p style="margin: 0; color: #2e7d32; font-weight: 600;">✓ Harmonisch</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #666;">Passt zu Spar-Thema & Sekundärfarbe</p>
+                </div>
+            </div>
+
+            <!-- Option B: Gold -->
+            <div class="option-card">
+                <div class="option-title">Option B: Gold</div>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">
+                    Premium-Feeling, weniger grell als Orange
+                </p>
+
+                <div class="badge-example">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Feature Badges:</p>
+                    <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Kostenlos</span>
+                    <span style="display: inline-block; background: #fff8e1; color: #f57f17; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px;">Premium</span>
+                </div>
+
+                <div class="feature-card-demo">
+                    <h3 style="color: #1e3a5f; margin-bottom: 10px;">💡 Intelligente Spartipps</h3>
+                    <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 1 Gerät</span>
+                    <span style="display: inline-block; background: #fff8e1; color: #f57f17; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px; margin-bottom: 15px;">Premium: Unbegrenzt</span>
+                    <p style="color: #666; font-size: 0.9rem;">
+                        SpotWatt berechnet die optimalen Zeitfenster für Ihre Geräte...
+                    </p>
+                </div>
+
+                <div class="comparison-table-demo">
+                    <div class="table-row table-header">
+                        <div>Features</div>
+                        <div>Kostenlos</div>
+                        <div style="background: #4CAF50;">Premium</div>
+                    </div>
+                    <div class="table-row">
+                        <div><strong>💡 Spartipps</strong></div>
+                        <div style="text-align: center;">
+                            <span style="color: #4CAF50; font-size: 1.3rem;">✓</span>
+                            <div style="font-size: 0.8rem; color: #666;">1 Gerät</div>
+                        </div>
+                        <div style="text-align: center; background: #fffbf0;">
+                            <span style="color: #4CAF50; font-size: 1.3rem;">✓</span>
+                            <div style="font-size: 0.8rem; color: #f57f17; font-weight: 600;">Unbegrenzt</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #fff8e1; border-radius: 8px;">
+                    <p style="margin: 0; color: #f57f17; font-weight: 600;">✓ Premium-Feeling</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #666;">Wirkt wertvoll, aber weicht vom Design ab</p>
+                </div>
+            </div>
+
+            <!-- Option C: Dunkelblau -->
+            <div class="option-card">
+                <div class="option-title">Option C: Dunkelblau</div>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">
+                    Exklusiv, passt perfekt zur Primärfarbe
+                </p>
+
+                <div class="badge-example">
+                    <p style="margin-bottom: 10px; font-weight: 600;">Feature Badges:</p>
+                    <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Kostenlos</span>
+                    <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px;">Premium</span>
+                </div>
+
+                <div class="feature-card-demo">
+                    <h3 style="color: #1e3a5f; margin-bottom: 10px;">💡 Intelligente Spartipps</h3>
+                    <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 1 Gerät</span>
+                    <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px; margin-bottom: 15px;">Premium: Unbegrenzt</span>
+                    <p style="color: #666; font-size: 0.9rem;">
+                        SpotWatt berechnet die optimalen Zeitfenster für Ihre Geräte...
+                    </p>
+                </div>
+
+                <div class="comparison-table-demo">
+                    <div class="table-row table-header">
+                        <div>Features</div>
+                        <div>Kostenlos</div>
+                        <div style="background: #4CAF50;">Premium</div>
+                    </div>
+                    <div class="table-row">
+                        <div><strong>💡 Spartipps</strong></div>
+                        <div style="text-align: center;">
+                            <span style="color: #4CAF50; font-size: 1.3rem;">✓</span>
+                            <div style="font-size: 0.8rem; color: #666;">1 Gerät</div>
+                        </div>
+                        <div style="text-align: center; background: #e8eef5;">
+                            <span style="color: #4CAF50; font-size: 1.3rem;">✓</span>
+                            <div style="font-size: 0.8rem; color: #1e3a5f; font-weight: 600;">Unbegrenzt</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #e8eef5; border-radius: 8px;">
+                    <p style="margin: 0; color: #1e3a5f; font-weight: 600;">✓ Perfekte Harmonie</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #666;">Exklusiv, aber könnte zu dunkel wirken</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Comparison Summary -->
+        <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="color: #1e3a5f; margin-bottom: 20px;">Zusammenfassung</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Kriterium</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #e0e0e0;">Grün</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #e0e0e0;">Gold</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #e0e0e0;">Dunkelblau</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #f0f0f0;">Harmonie mit Design</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #4CAF50; font-size: 1.3rem;">★★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #f57f17; font-size: 1.3rem;">★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #1976d2; font-size: 1.3rem;">★★★</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #f0f0f0;">Premium-Feeling</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #4CAF50; font-size: 1.3rem;">★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #f57f17; font-size: 1.3rem;">★★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #1976d2; font-size: 1.3rem;">★★★</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #f0f0f0;">Lesbarkeit</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #4CAF50; font-size: 1.3rem;">★★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #f57f17; font-size: 1.3rem;">★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #1976d2; font-size: 1.3rem;">★★★</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #f0f0f0;">Passt zu "Sparen"</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #4CAF50; font-size: 1.3rem;">★★★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #f57f17; font-size: 1.3rem;">★</td>
+                        <td style="padding: 12px; text-align: center; border-bottom: 1px solid #f0f0f0; color: #1976d2; font-size: 1.3rem;">★★</td>
+                    </tr>
+                    <tr style="background: #f8f9fa; font-weight: bold;">
+                        <td style="padding: 12px;">Empfehlung</td>
+                        <td style="padding: 12px; text-align: center; color: #4CAF50;">✓ Beste Wahl</td>
+                        <td style="padding: 12px; text-align: center; color: #666;">Alternative</td>
+                        <td style="padding: 12px; text-align: center; color: #1976d2;">Sehr gut</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #4CAF50;">
+                <h3 style="color: #2e7d32; margin-top: 0;">Empfehlung: Option A (Grün)</h3>
+                <ul style="color: #666; margin: 10px 0;">
+                    <li>Harmoniert perfekt mit "Sparen"-Thema</li>
+                    <li>Passt zur bestehenden Sekundärfarbe (#4CAF50)</li>
+                    <li>Konsistent mit Spartipps-Section (grüner Gradient)</li>
+                    <li>Gut lesbar und nicht zu grell</li>
+                    <li>Wirkt freundlich und einladend</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" style="display: inline-block; background: #4CAF50; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600;">← Zurück zur Homepage</a>
+        </div>
+    </div>
+</body>
+</html>
