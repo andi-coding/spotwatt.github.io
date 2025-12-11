@@ -5,18 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotWatt - Intelligente Strompreis-App für Deutschland & Österreich</title>
     <meta name="description" content="SpotWatt zeigt Ihnen die aktuellen Spotmarkt-Strompreise für Deutschland und Österreich. Optimieren Sie Ihren Stromverbrauch mit Echtzeit-Preisdaten, Preiswarnungen und intelligenten Benachrichtigungen.">
+    <meta name="keywords" content="Strompreis, Spotmarkt, EPEX, Stromkosten, Energiepreise, Deutschland, Österreich, Tibber, dynamischer Stromtarif, Strompreis App, E-Auto laden, Wärmepumpe">
+    <meta name="author" content="SpotWatt">
+    <link rel="canonical" href="https://spotwatt.at/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spotwatt.at/">
+    <meta property="og:title" content="SpotWatt - Strompreise im Blick. Kosten im Griff.">
+    <meta property="og:description" content="Die intelligente Strompreis-App für Deutschland & Österreich. Aktuelle EPEX Spotmarkt-Preise, Spartipps und Preis-Alarme.">
+    <meta property="og:image" content="https://spotwatt.at/spotwatt_logo_final.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="SpotWatt">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://spotwatt.at/">
+    <meta name="twitter:title" content="SpotWatt - Strompreise im Blick. Kosten im Griff.">
+    <meta name="twitter:description" content="Die intelligente Strompreis-App für Deutschland & Österreich. Aktuelle EPEX Spotmarkt-Preise, Spartipps und Preis-Alarme.">
+    <meta name="twitter:image" content="https://spotwatt.at/spotwatt_logo_final.png">
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="web/icons/Icon-192.png">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "SpotWatt",
+        "description": "Die intelligente Strompreis-App für Deutschland und Österreich. Aktuelle EPEX Spotmarkt-Preise, Spartipps und Preis-Alarme.",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "UtilitiesApplication",
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "name": "Kostenlose Version"
+            },
+            {
+                "@type": "Offer",
+                "price": "6.99",
+                "priceCurrency": "EUR",
+                "name": "Premium (Einmalkauf)"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "1"
+        },
+        "downloadUrl": [
+            "https://apps.apple.com/de/app/spotwatt/id6754503849"
+        ],
+        "screenshot": "https://spotwatt.at/App_Screenshots/Spotwatt_Homescreen_Preise.jpg",
+        "softwareVersion": "1.0",
+        "author": {
+            "@type": "Organization",
+            "name": "SpotWatt",
+            "url": "https://spotwatt.at"
+        },
+        "inLanguage": "de",
+        "countriesSupported": ["DE", "AT"]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SpotWatt",
+        "url": "https://spotwatt.at",
+        "logo": "https://spotwatt.at/spotwatt_logo_final.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@spotwatt.at",
+            "contactType": "customer service"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1><img src="spotwatt_logo_final.png" alt="SpotWatt Logo" style="height: 32px; vertical-align: middle; margin-right: 8px;">SpotWatt</h1>
+                <a href="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="spotwatt_logo_final.png" alt="SpotWatt Logo" style="height: 32px; vertical-align: middle; margin-right: 8px;">
+                    <span style="font-size: 1.5rem; font-weight: bold;">SpotWatt</span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Start</a></li>
@@ -36,7 +118,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title">Strompreise im Blick.<br>Kosten im Griff.</h2>
+                <h1 class="hero-title">Strompreise im Blick.<br>Kosten im Griff.</h1>
                 <p class="hero-subtitle">
                     SpotWatt zeigt Ihnen die aktuellen Spotmarkt-Strompreise für Deutschland und Österreich.
                     Nutzen Sie günstige Stunden optimal und sparen Sie bares Geld.
@@ -56,7 +138,7 @@
                 <div style="position: relative; display: inline-block; background: #000; padding: 12px; border-radius: 30px; box-shadow: 0 25px 50px rgba(0,0,0,0.4);">
                     <!-- Screen -->
                     <img src="App_Screenshots/Spotwatt_Homescreen_Preise.jpg"
-                         alt="SpotWatt App Screenshot"
+                         alt="SpotWatt App - Aktuelle Strompreise und 24-Stunden-Vorschau auf dem Homescreen"
                          style="width: 280px; height: auto; border-radius: 20px; display: block;">
                     <!-- Home indicator -->
                     <div style="position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: #666; border-radius: 2px;"></div>
@@ -175,7 +257,7 @@
                 <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <h4 style="color: #1e3a5f; margin-bottom: 15px;">Waschmaschine</h4>
                     <div style="border-radius: 8px; overflow: hidden; margin-bottom: 15px;">
-                        <img src="App_Screenshots/Waschmaschine_Spartipp.jpg" alt="Waschmaschinen Spartipp" style="width: 100%; display: block;">
+                        <img src="App_Screenshots/Waschmaschine_Spartipp.jpg" alt="SpotWatt Spartipp: Optimale Laufzeit für Waschmaschine bei günstigem Strompreis" style="width: 100%; display: block;">
                     </div>
                     <p style="color: #666; font-size: 0.9rem; margin: 0;">
                         Optimale Zeitfenster
@@ -185,7 +267,7 @@
                 <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <h4 style="color: #1e3a5f; margin-bottom: 15px;">E-Auto laden</h4>
                     <div style="border-radius: 8px; overflow: hidden; margin-bottom: 15px;">
-                        <img src="App_Screenshots/EAuto_Spartipp.jpg" alt="E-Auto Spartipp" style="width: 100%; display: block;">
+                        <img src="App_Screenshots/EAuto_Spartipp.jpg" alt="SpotWatt Spartipp: Günstigste Stunden zum E-Auto laden" style="width: 100%; display: block;">
                     </div>
                     <p style="color: #666; font-size: 0.9rem; margin: 0;">
                         Günstigste Ladestunden automatisch berechnet
@@ -195,7 +277,7 @@
                 <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <h4 style="color: #1e3a5f; margin-bottom: 15px;">Geschirrspüler</h4>
                     <div style="border-radius: 8px; overflow: hidden; margin-bottom: 15px;">
-                        <img src="App_Screenshots/Geschirrspüler_Spartipp.jpg" alt="Geschirrspüler Spartipp" style="width: 100%; display: block;">
+                        <img src="App_Screenshots/Geschirrspüler_Spartipp.jpg" alt="SpotWatt Spartipp: Bester Zeitpunkt für Geschirrspüler bei niedrigem Strompreis" style="width: 100%; display: block;">
                     </div>
                     <p style="color: #666; font-size: 0.9rem; margin: 0;">
                         Perfektes Timing für maximale Ersparnis
