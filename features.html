@@ -28,6 +28,7 @@
             gap: 60px;
             align-items: center;
             margin-bottom: 80px;
+            scroll-margin-top: 100px;
         }
         .feature-detail:nth-child(even) {
             direction: rtl;
@@ -161,7 +162,7 @@
     <div class="features-container">
         
         <!-- Aktuelle Preise & Vorschau -->
-        <div class="feature-detail">
+        <div class="feature-detail" id="preise">
             <div class="feature-info">
                 <h2>📈 Aktuelle Preise & Vorschau</h2>
                 <p>
@@ -188,7 +189,7 @@
         </div>
 
         <!-- Smart Notifications -->
-        <div class="feature-detail">
+        <div class="feature-detail" id="benachrichtigungen">
             <div class="feature-info">
                 <h2>🔔 Tägliche Preisvorschau</h2>
                 <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 17:00 Uhr</span>
@@ -226,7 +227,7 @@
 
 
         <!-- Widget -->
-        <div class="feature-detail">
+        <div class="feature-detail" id="widget">
             <div class="feature-info">
                 <h2>🏠 Homescreen Widget</h2>
                 <p>
@@ -251,7 +252,7 @@
         </div>
 
         <!-- Spartipps -->
-        <div class="feature-detail">
+        <div class="feature-detail" id="spartipps">
             <div class="feature-info">
                 <h2>💡 Intelligente Spartipps</h2>
                 <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 1 Gerät</span>
@@ -264,10 +265,9 @@
                 </p>
                 <ul class="feature-benefits">
                     <li>Automatische Berechnung optimaler Zeitfenster</li>
-                    <li>Flexible Zeitvorgaben: "Fertig bis 7 Uhr", "nur tagsüber", "nur nachts"</li>
+                    <li>Flexible Zeitvorgaben: z.B. E-Auto bis 7 Uhr geladen, Waschmaschine nur tagsüber, Geschirrspüler nur nachts</li>
                     <li>Individuelle Geräteprofile (Verbrauch, Laufzeit)</li>
                     <li>Vorkonfigurierte Profile für gängige Geräte</li>
-                    <li>Anzeige der Ersparnis pro Nutzung in Echtzeit</li>
                     <li>Kostenlos: 1 Gerät konfigurieren</li>
                     <li>Premium: Unbegrenzte Geräte + automatische Erinnerungen</li>
                 </ul>
@@ -291,7 +291,7 @@
         </div>
 
         <!-- Preis-Alarm -->
-        <div class="feature-detail">
+        <div class="feature-detail" id="preisalarm">
             <div class="feature-info">
                 <h2>⚡ Preis-Alarm</h2>
                 <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">PREMIUM</span>
@@ -353,7 +353,7 @@
         </div>
 
         <!-- Statistiken & Einsparungen -->
-        <div class="feature-detail">
+        <div class="feature-detail" id="statistiken">
             <div class="feature-info">
                 <h2>📊 Einsparungen & Statistiken</h2>
                 <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: Aktueller Monat</span>
@@ -389,7 +389,7 @@
         </div>
 
         <!-- Vollkosten-Rechner ---->
-        <div class="feature-detail">
+        <div class="feature-detail" id="vollkosten">
             <div class="feature-info">
                 <h2>💰 Vollkosten-Rechner</h2>
                 <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">PREMIUM</span>
@@ -400,12 +400,21 @@
                 </p>
                 <ul class="feature-benefits">
                     <li>Berechnung der Absolutpreise inklusive aller Gebühren</li>
-                    <li>Große Auswahl vorkonfigurierter Energieanbieter</li>
                     <li>Energieanbietergebühren, Netzkosten und Umsatzsteuer berücksichtigt</li>
                     <li>Transparente Kostenaufschlüsselung</li>
-                    <li>Realistische Einschätzung der tatsächlichen Stromkosten</li>
-                    <li>Ihr Anbieter fehlt? Kontaktieren Sie uns!</li>
+                    <li>Eigene Anbieter-Gebühren manuell konfigurierbar</li>
                 </ul>
+
+                <!-- Vorkonfigurierte Anbieter -->
+                <div style="margin-top: 20px; padding: 15px; background: var(--light-color); border-radius: 10px;">
+                    <p style="margin: 0 0 10px 0; font-weight: 600; color: #1e3a5f; font-size: 0.9rem;">Vorkonfigurierte Anbieter:</p>
+                    <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #555;">
+                        <strong>🇦🇹</strong> aWATTar, Verbund, smartENERGY, oekostrom, Energie Steiermark, HOFER, AAE, wüsterstrom
+                    </p>
+                    <p style="margin: 0; font-size: 0.85rem; color: #555;">
+                        <strong>🇩🇪</strong> Tibber, tado° Energy, energiehoch3
+                    </p>
+                </div>
             </div>
             <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
                 <div style="text-align: center;">
