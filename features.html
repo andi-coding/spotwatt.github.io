@@ -160,17 +160,17 @@
 
     <!-- Features Details -->
     <div class="features-container">
-        
+
         <!-- Aktuelle Preise & Vorschau -->
         <div class="feature-detail" id="preise">
             <div class="feature-info">
                 <h2>📈 Aktuelle Preise & Vorschau</h2>
                 <p>
                     Verfolgen Sie die aktuellen EPEX Spotmarkt-Preise und planen Sie voraus mit der 24-Stunden-Vorschau.
-                    Die App aktualisiert sich automatisch stündlich und zeigt ab 15 Uhr alle Preise des Folgetages.
+                    Die App aktualisiert Strompreise stündlich oder auch viertelstündlich und zeigt ab 15 Uhr alle Preise des Folgetages.
                 </p>
                 <ul class="feature-benefits">
-                    <li>Aktuelle Strompreise stündlich aktualisiert</li>
+                    <li>Strompreise stündlich oder auch viertelstündlich aktualisiert</li>
                     <li>24-Stunden-Vorschau ab 15 Uhr verfügbar</li>
                     <li>Vergleich mit Tagesdurchschnitt - Farbcodierung für schnelle Preisbewertung</li>
                     <li>Beste und schlechteste Stunden markiert</li>
@@ -178,8 +178,8 @@
             </div>
             <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
                 <div style="text-align: center;">
-                    <img src="App_Screenshots/Spotwatt_Homescreen_Preise.jpg"
-                         alt="SpotWatt Preise Screenshot"
+                    <img src="App_Screenshots/preisvorschau_homepage.jpeg"
+                         alt="SpotWatt Preise Screenshot mit 15-Minuten-Preisen"
                          style="max-width: 250px; height: auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
                     <p style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
                         Aktuelle Preise & 24h-Vorschau
@@ -188,65 +188,54 @@
             </div>
         </div>
 
-        <!-- Smart Notifications -->
-        <div class="feature-detail" id="benachrichtigungen">
+        <!-- Vollkosten-Rechner -->
+        <div class="feature-detail" id="vollkosten">
             <div class="feature-info">
-                <h2>🔔 Tägliche Preisvorschau</h2>
-                <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 17:00 Uhr</span>
-                <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px; margin-bottom: 15px;">Premium: Konfigurierbar</span>
+                <h2>💰 Vollkosten-Rechner</h2>
+                <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">PREMIUM</span>
                 <p>
-                    Erhalten Sie täglich eine Zusammenfassung der günstigsten Stunden von heute und morgen.
-                    Mit Premium: Wählen Sie selbst, wann Sie informiert werden möchten - z.B. um 7 Uhr beim Aufstehen.
+                    Sehen Sie Ihre tatsächlichen Stromkosten auf einen Blick! Der Vollkosten-Rechner berechnet
+                    nicht nur die EPEX Spotmarkt-Preise, sondern bezieht auch alle Zusatzkosten Ihres
+                    Energieanbieters mit ein – inklusive zeitabhängiger Netzentgelte.
                 </p>
                 <ul class="feature-benefits">
-                    <li>Tägliche Benachrichtigung mit den 3 günstigsten Stunden</li>
-                    <li>Übersicht für heute und morgen</li>
-                    <li>Warnungen vor Hochpreisphasen (>50ct)</li>
-                    <li>Kostenlos: Fix um 17:00 Uhr</li>
-                    <li>Premium: Uhrzeit frei wählbar (z.B. 7:00 Uhr)</li>
-                    <li>Premium: Anzahl der Stunden konfigurierbar</li>
-                    <li>Premium: Preisschwellen anpassbar</li>
+                    <li>Energieanbieter-Aufschläge, Netzentgelte und Steuern berücksichtigt</li>
+                    <li>Zeitabhängige Netzentgelte (z.B. NT/HT-Tarife oder % Rabatt) automatisch einberechnet</li>
+                    <li>Transparente Kostenaufschlüsselung</li>
+                    <li>Eigene Anbieter-Gebühren manuell konfigurierbar</li>
                 </ul>
-            </div>
-            <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
-                <div style="text-align: center;">
-                    <img src="App_Screenshots/Daily_Notification.jpg"
-                         alt="SpotWatt Tägliche Benachrichtigung"
-                         style="width: 250px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
-                    <div style="margin-top: 10px;">
-                        <img src="App_Screenshots/Cheapest_Time_Notification.jpg"
-                             alt="SpotWatt Günstigste Zeit Benachrichtigung"
-                             style="width: 250px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
-                    </div>
-                    <p style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
-                        Tägliche Preisvorschau & Günstigste Stunden
+
+                <!-- Vorkonfigurierte Anbieter -->
+                <div style="margin-top: 20px; padding: 15px; background: var(--light-color); border-radius: 10px;">
+                    <p style="margin: 0 0 10px 0; font-weight: 600; color: #1e3a5f; font-size: 0.9rem;">Vorkonfigurierte Anbieter:</p>
+                    <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #555;">
+                        <strong>🇦🇹</strong> aWATTar, Verbund, smartENERGY, oekostrom, Energie Steiermark, HOFER, AAE, wüsterstrom
+                    </p>
+                    <p style="margin: 0; font-size: 0.85rem; color: #555;">
+                        <strong>🇩🇪</strong> Tibber, tado° Energy, energiehoch3
                     </p>
                 </div>
             </div>
-        </div>
-
-
-        <!-- Widget -->
-        <div class="feature-detail" id="widget">
-            <div class="feature-info">
-                <h2>🏠 Homescreen Widget</h2>
-                <p>
-                    Behalten Sie die Strompreise immer im Blick - direkt auf Ihrem Homescreen. 
-                    Das Widget zeigt die wichtigsten Informationen ohne die App öffnen zu müssen.
-                </p>
-                <ul class="feature-benefits">
-                    <li>Aktueller Preis auf einen Blick</li>
-                    <li>Trend-Indikator für Preisentwicklung</li>
-                </ul>
-            </div>
             <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
                 <div style="text-align: center;">
-                    <img src="App_Screenshots/Widget_neu.png"
-                         alt="SpotWatt Widget Screenshot"
-                         style="max-width: 250px; height: auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-                    <p style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
-                        Widget direkt am Homescreen
-                    </p>
+                    <div style="margin-bottom: 15px;">
+                        <img src="App_Screenshots/Fullcost_homepage.jpeg"
+                             alt="SpotWatt Vollkosten-Rechner Screenshot"
+                             style="max-width: 220px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+                        <p style="margin-top: 8px; color: var(--text-color); font-size: 0.85rem;">Vollkosten mit allen Gebühren</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <img src="App_Screenshots/NT_HT_Netzentgelte_1.jpeg"
+                             alt="Zeitabhängige Netzentgelte HT/NT Konfiguration"
+                             style="max-width: 220px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+                        <p style="margin-top: 8px; color: var(--text-color); font-size: 0.85rem;">Zeitabhängige Netzentgelte (NT/HT)</p>
+                    </div>
+                    <div>
+                        <img src="App_Screenshots/Sonnenrabatt.jpeg"
+                             alt="Sonnenrabatt Konfiguration für Österreich"
+                             style="max-width: 220px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+                        <p style="margin-top: 8px; color: var(--text-color); font-size: 0.85rem;">Sonnenrabatt (🇦🇹 Österreich)</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -290,6 +279,43 @@
             </div>
         </div>
 
+        <!-- Smart Notifications -->
+        <div class="feature-detail" id="benachrichtigungen">
+            <div class="feature-info">
+                <h2>🔔 Tägliche Preisvorschau</h2>
+                <span style="display: inline-block; background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Kostenlos: 17:00 Uhr</span>
+                <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-left: 8px; margin-bottom: 15px;">Premium: Konfigurierbar</span>
+                <p>
+                    Erhalten Sie täglich eine Zusammenfassung der günstigsten Stunden von heute und morgen.
+                    Mit Premium: Wählen Sie selbst, wann Sie informiert werden möchten - z.B. um 7 Uhr beim Aufstehen.
+                </p>
+                <ul class="feature-benefits">
+                    <li>Tägliche Benachrichtigung mit den 3 günstigsten Stunden</li>
+                    <li>Übersicht für heute und morgen</li>
+                    <li>Warnungen vor Hochpreisphasen (>50ct)</li>
+                    <li>Kostenlos: Fix um 17:00 Uhr</li>
+                    <li>Premium: Uhrzeit frei wählbar (z.B. 7:00 Uhr)</li>
+                    <li>Premium: Anzahl der Stunden konfigurierbar</li>
+                    <li>Premium: Preisschwellen anpassbar</li>
+                </ul>
+            </div>
+            <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
+                <div style="text-align: center;">
+                    <img src="App_Screenshots/Daily_Notification.jpg"
+                         alt="SpotWatt Tägliche Benachrichtigung"
+                         style="width: 250px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+                    <div style="margin-top: 10px;">
+                        <img src="App_Screenshots/Cheapest_Time_Notification.jpg"
+                             alt="SpotWatt Günstigste Zeit Benachrichtigung"
+                             style="width: 250px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
+                        Tägliche Preisvorschau & Günstigste Stunden
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!-- Preis-Alarm -->
         <div class="feature-detail" id="preisalarm">
             <div class="feature-info">
@@ -321,6 +347,31 @@
                              style="max-width: 220px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
                         <p style="margin-top: 8px; color: var(--text-color); font-size: 0.85rem;">Push-Benachrichtigung bei günstigem Preis</p>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Widget -->
+        <div class="feature-detail" id="widget">
+            <div class="feature-info">
+                <h2>🏠 Homescreen Widget</h2>
+                <p>
+                    Behalten Sie die Strompreise immer im Blick - direkt auf Ihrem Homescreen.
+                    Das Widget zeigt die wichtigsten Informationen ohne die App öffnen zu müssen.
+                </p>
+                <ul class="feature-benefits">
+                    <li>Aktueller Preis auf einen Blick</li>
+                    <li>Trend-Indikator für Preisentwicklung</li>
+                </ul>
+            </div>
+            <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
+                <div style="text-align: center;">
+                    <img src="App_Screenshots/Widget_neu.png"
+                         alt="SpotWatt Widget Screenshot"
+                         style="max-width: 250px; height: auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
+                        Widget direkt am Homescreen
+                    </p>
                 </div>
             </div>
         </div>
@@ -384,46 +435,6 @@
                              style="max-width: 220px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
                         <p style="margin-top: 8px; color: var(--text-color); font-size: 0.85rem;">Jahresstatistik (Premium)</p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vollkosten-Rechner ---->
-        <div class="feature-detail" id="vollkosten">
-            <div class="feature-info">
-                <h2>💰 Vollkosten-Rechner</h2>
-                <span style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">PREMIUM</span>
-                <p>
-                    Sehen Sie Ihre tatsächlichen Stromkosten auf einen Blick! Der Vollkosten-Rechner berechnet
-                    nicht nur die EPEX Spotmarkt-Preise, sondern bezieht auch alle Zusatzkosten Ihres
-                    Energieanbieters mit ein.
-                </p>
-                <ul class="feature-benefits">
-                    <li>Berechnung der Absolutpreise inklusive aller Gebühren</li>
-                    <li>Energieanbietergebühren, Netzkosten und Umsatzsteuer berücksichtigt</li>
-                    <li>Transparente Kostenaufschlüsselung</li>
-                    <li>Eigene Anbieter-Gebühren manuell konfigurierbar</li>
-                </ul>
-
-                <!-- Vorkonfigurierte Anbieter -->
-                <div style="margin-top: 20px; padding: 15px; background: var(--light-color); border-radius: 10px;">
-                    <p style="margin: 0 0 10px 0; font-weight: 600; color: #1e3a5f; font-size: 0.9rem;">Vorkonfigurierte Anbieter:</p>
-                    <p style="margin: 0 0 8px 0; font-size: 0.85rem; color: #555;">
-                        <strong>🇦🇹</strong> aWATTar, Verbund, smartENERGY, oekostrom, Energie Steiermark, HOFER, AAE, wüsterstrom
-                    </p>
-                    <p style="margin: 0; font-size: 0.85rem; color: #555;">
-                        <strong>🇩🇪</strong> Tibber, tado° Energy, energiehoch3
-                    </p>
-                </div>
-            </div>
-            <div class="feature-visual" style="background: none; box-shadow: none; padding: 1rem;">
-                <div style="text-align: center;">
-                    <img src="App_Screenshots/Vollkostenmodus_neu.jpg"
-                         alt="SpotWatt Vollkosten-Rechner Screenshot"
-                         style="max-width: 250px; height: auto; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-                    <p style="margin-top: 1rem; color: var(--text-color); font-size: 0.9rem;">
-                        Vollkosten mit allen Gebühren
-                    </p>
                 </div>
             </div>
         </div>
